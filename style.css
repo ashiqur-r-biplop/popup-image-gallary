@@ -8,7 +8,9 @@
     height: 1000px;
 }
 
-
+.no-scroll{
+    overflow-y: hidden;
+}
 .image-gallery {
     position: relative;
     transition: top 0.3s ease-in-out;
