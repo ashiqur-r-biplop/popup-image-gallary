@@ -4,13 +4,11 @@
     box-sizing: border-box;
 }
 
-.test-div {
-    height: 1000px;
-}
 
-.no-scroll{
+.no-scroll {
     overflow-y: hidden;
 }
+
 .image-gallery {
     position: relative;
     transition: top 0.3s ease-in-out;
@@ -83,7 +81,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-     object-position: center;
+    object-position: center;
 }
 
 .close-icon {
@@ -93,4 +91,47 @@
     right: -20px;
     cursor: pointer;
     font-size: 30px;
+}
+
+@media screen and (max-width: 520px) {
+
+    .image-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .image-box {
+        width: 90%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .popup-image {
+        width: 80%;
+        height: auto;
+        position: relative;
+    
+    }
+}
+@media screen and  (min-width: 521px) and (max-width: 780px) {
+
+    .image-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .image-box {
+        width: 90%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .popup-image {
+        width: 80%;
+        height: auto;
+        position: relative;
+    
+    }
 }
