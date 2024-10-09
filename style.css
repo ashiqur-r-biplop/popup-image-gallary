@@ -1,137 +1,151 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 .no-scroll {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .image-gallery {
-    position: relative;
-    transition: top 0.3s ease-in-out;
+  position: relative;
+  transition: top 0.3s ease-in-out;
 }
 
 .image-gallery.top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
-
-
-
 .image-container {
-    max-width: 1180px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .image-grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 
 .image-box {
-    width: 100%;
-    height: 200px;
+  width: 100%;
+  max-height: 150px;
 }
 
 .image-box img {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: center;
 }
 
 .popup-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(83, 83, 83, 0.671);
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    overflow-y: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(83, 83, 83, 0.671);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
 }
 
 #animation {
-    transform: scale(0);
-    transition: all .3s ease-in-out;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
 }
 
 .popup-image {
-    width: 80%;
-    height: 80%;
-    position: relative;
-
+  max-width: 80%;
+  height: 60%;
+  position: relative;
+  object-fit: contain;
+  
 }
 
 .popup-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .close-icon {
-    color: white;
-    position: absolute;
-    top: -40px;
-    right: -20px;
-    cursor: pointer;
-    font-size: 30px;
+  color: white;
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  cursor: pointer;
+  font-size: 30px;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (min-width:0px) and (max-width: 520px) {
+  .image-container {
+    padding: 0px 20px;
+  }
+  .image-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 
-    .image-grid {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-
-    .image-box {
-        width: 90%;
-        height: 200px;
-        margin: 0 auto;
-    }
-    .popup-image {
-        width: 80%;
-        height: auto;
-        position: relative;
-    
-    }
+  .image-box {
+    width: 100%;
+    min-height: 250px;
+    margin: 0 auto;
+  }
+  .popup-image {
+    width: 80%;
+    height: auto;
+    position: relative;
+  }
 }
-@media screen and  (min-width: 521px) and (max-width: 780px) {
+@media screen and (min-width: 521px) and (max-width: 1100px) {
+  .image-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0px 20px;
+  }
+  .image-box {
+    max-height: 120px;
+    margin: 0 auto;
+    border: 1px solid red;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 780px) {
+  .image-container {
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 0px 20px;
+  }
+  .image-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 
-    .image-grid {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .image-box {
-        width: 90%;
-        height: 200px;
-        margin: 0 auto;
-    }
-    .popup-image {
-        width: 80%;
-        height: auto;
-        position: relative;
-    
-    }
+  .image-box {
+    width: 100%;
+    max-height: 200px;
+    margin: 0 auto;
+  }
+  .popup-image {
+    width: 80%;
+    height: auto;
+    position: relative;
+  }
 }
