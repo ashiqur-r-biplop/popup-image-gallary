@@ -1,6 +1,6 @@
 function openImage(element) {
   const popupContainer = document.querySelector(".popup-container");
-  const popupImage = document.getElementById("popupimage");
+  const popupImage = document.getElementById("popupimage"); 
   const animation = document.getElementById("animation");
   const imageGallery = document.querySelector(".image-gallery");
 
